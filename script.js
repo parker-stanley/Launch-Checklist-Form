@@ -5,13 +5,26 @@ window.addEventListener("load", function() {
    button.addEventListener("click", function(){
       let pilotName = document.getElementById("pilotName");
       let copilotName = document.querySelector("input[name=copilotName]");
-      let fuelLEvel = document.querySelector("input[name=fuelLevel]")
+      let fuelLevel = document.querySelector("input[name=fuelLevel]")
       let cargoMass = document.querySelector("input[name=cargoMass]");
-      if (pilotName == "" || copilotName == "" || fuelLEvel == "" || cargoMass == ""){
-         alert("Please enter valid information into required fields.")
+      if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
+         alert("Please enter valid information into required fields.");
       }
-   })
-}
+   });
+
+
+
+});
+
+// function emptyFields() {
+//    let pilotName = document.getElementById("pilotName");
+//    let copilotName = document.querySelector("input[name=copilotName]");
+//    let fuelLevel = document.querySelector("input[name=fuelLevel]")
+//    let cargoMass = document.querySelector("input[name=cargoMass]");
+//    if (pilotName === "" || copilotName === "" || fuelLevel === "" || cargoMass === "") {
+//       alert("Please enter valid information into required fields.");
+//    }
+// }
 
 
 /* This block of code shows how to format the HTML once you fetch some planetary JSON!
