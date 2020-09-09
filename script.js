@@ -50,6 +50,7 @@ window.addEventListener("load", function() {
          heading.innerHTML = "Shuttle not ready for launch."
          heading.style.color = "red"; 
       }
+      event.preventDefault();
    });
 });
 
