@@ -1,5 +1,3 @@
-// Write your JavaScript code here!
-
 fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
    response.json().then( function(json) {
       let destination = document.getElementById("missionTarget");
@@ -58,41 +56,4 @@ window.addEventListener("load", function() {
       }
    });
 });
-
-// function emptyFields() {
-//    let pilotName = document.getElementById("pilotName");
-//    let copilotName = document.querySelector("input[name=copilotName]");
-//    let fuelLevel = document.querySelector("input[name=fuelLevel]")
-//    let cargoMass = document.querySelector("input[name=cargoMass]");
-//    if (pilotName === "" || copilotName === "" || fuelLevel === "" || cargoMass === "") {
-//       alert("Please enter valid information into required fields.");
-//    }
-// }
-
-// function launchReady(fuelStatus, cargoStatus) {
-//    let faultyItems = document.getElementById("faultyItems");
-//    let heading = document.getElementById("launchStatus");
-//    let pilot = document.getElementById("pilotStatus");
-//    let copilot = document.getElementById("copilotStatus");
-//    let fuel = document.getElementById("fuelStatus");
-//    let cargo = document.getElementById("cargoStatus");
-//    pilot.innerHTML = pilotName.value;
-//    copilot.innerHTML = copilotName.value;
-//    if (fuelLevel.value >= 10000 && cargoMass <= 10000) {
-//       heading.innerHTML = "Shuttle is ready for launch."
-//       heading.style.color = "green"; 
-//    }
-//    if (fuelLevel.value < 10000) {
-//       faultyItems.style.visibility = "visible";
-//       fuel.innerHTML = "Caution. There is not enough fuel the journey."
-//       heading.innerHTML = "Shuttle not ready for launch."
-//       heading.style.color = "red"; 
-//    }
-//    if (cargoMass.value > 10000) {
-//       faultyItems.style.visibility = "visible";
-//       cargo.innerHTML = "There is too much cargo for the ship to take off!";
-//       heading.innerHTML = "Shuttle not ready for launch."
-//       heading.style.color = "red"; 
-//    }
-// }
 
