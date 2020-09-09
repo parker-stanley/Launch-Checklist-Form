@@ -36,11 +36,9 @@ window.addEventListener("load", function() {
       let cargoMass = document.querySelector("input[name=cargoMass]");
       if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
          alert("Please enter valid information into required fields.");
-         event.preventDefault();
       }
       // if (isNaN(pilotName.value) || isNaN(copilotName.value) || Number(fuelLevel.value) === "string" || Number(cargoMass.value) === "string") {
       //    alert("Please enter names for pilots and copilots and number values for fuel level and cargo mass.");
-      //    event.preventDefault();
       // }
       let faultyItems = document.getElementById("faultyItems");
       let heading = document.getElementById("launchStatus");
