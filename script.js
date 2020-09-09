@@ -35,11 +35,11 @@ window.addEventListener("load", function() {
       let fuelLevel = document.querySelector("input[name=fuelLevel]")
       let cargoMass = document.querySelector("input[name=cargoMass]");
       if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
-         alert("Please enter valid information into required fields.");
+         alert("Field values cannot be empty!");
       }
-      // if (isNaN(pilotName.value) || isNaN(copilotName.value) || Number(fuelLevel.value) === "string" || Number(cargoMass.value) === "string") {
-      //    alert("Please enter names for pilots and copilots and number values for fuel level and cargo mass.");
-      // }
+      if (!isNaN(pilotName.value) || !isNaN(copilotName.value) || isNaN(fuelLevel.value) || isNaN(cargoMass.value)) {
+         alert("Please enter names for pilots and copilots and number values for fuel level and cargo mass.");
+      }
       let faultyItems = document.getElementById("faultyItems");
       let heading = document.getElementById("launchStatus");
       let pilot = document.getElementById("pilotStatus");
@@ -64,7 +64,6 @@ window.addEventListener("load", function() {
          heading.innerHTML = "Shuttle not ready for launch."
          heading.style.color = "red"; 
       }
-      event.preventDefault();
    });
 });
 
