@@ -38,7 +38,7 @@ window.addEventListener("load", function() {
       let cargo = document.getElementById("cargoStatus");
       pilot.innerHTML = pilotName.value;
       copilot.innerHTML = copilotName.value;
-      if (fuelLevel.value >= 10000 && cargoMass <= 10000) {
+      if (fuelLevel.value >= 10000 && cargoMass.value <= 10000) {
          heading.innerHTML = "Shuttle is ready for launch."
          heading.style.color = "green"; 
       }
@@ -54,6 +54,7 @@ window.addEventListener("load", function() {
          heading.innerHTML = "Shuttle not ready for launch."
          heading.style.color = "red"; 
       }
+      event.preventDefault();
    });
 });
 
