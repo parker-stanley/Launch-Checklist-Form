@@ -26,9 +26,11 @@ window.addEventListener("load", function() {
       let cargoMass = document.querySelector("input[name=cargoMass]");
       if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
          alert("Field values cannot be empty!");
+         event.preventDefault();
       }
       if (!isNaN(pilotName.value) || !isNaN(copilotName.value) || isNaN(fuelLevel.value) || isNaN(cargoMass.value)) {
          alert("Please enter names for pilots and copilots and number values for fuel level and cargo mass.");
+         event.preventDefault();
       }
       let faultyItems = document.getElementById("faultyItems");
       let heading = document.getElementById("launchStatus");
